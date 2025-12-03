@@ -3,6 +3,7 @@ import json
 import argparse
 import sys
 
+
 def fix_example(schema):
     if not isinstance(schema, dict):
         return schema
@@ -15,7 +16,7 @@ def fix_example(schema):
         if key == "example":
             schema["examples"] = [v]
             del schema["example"]
-    
+
     return schema
 
 
